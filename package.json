@@ -2,7 +2,6 @@
   "name": "gmss",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8080",
   "dependencies": {
     "@material-ui/core": "^4.9.5",
     "@okta/okta-react": "^1.2.3",
@@ -22,11 +21,10 @@
   },
   "scripts": {
     "start": "cross-env PORT=8080 react-app-rewired start",
-    "heroku-prebuild": "react-app-rewired build && cp build/index.html public/index.html",
+    "build": "react-app-rewired build",
     "test": "echo 'Tests not yet implemented' && exit 1",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"npm run start-watch\" \"npm start\"",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "react-app-rewired build --prod"
   },
   "devDependencies": {
     "h": "^1.0.0",
