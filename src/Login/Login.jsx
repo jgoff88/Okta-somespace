@@ -12,9 +12,9 @@
 
 import React, { Component } from 'react';
 import * as OktaSignIn from '@okta/okta-signin-widget';
-import '@okta/okta-signin-widget/dist/css/okta-sign-in.min.css';
+import './node_modules/@okta/okta-signin-widget/dist/css/okta-sign-in.min.css';
 
-import config from './config';
+import config from '../../config';
 
 export default class LoginPage extends Component {
 	constructor(props) {
@@ -52,7 +52,8 @@ export default class LoginPage extends Component {
 				issuer,
 				display: 'page',
 				scopes
-			}
+			},
+			
 		});
 	}
 	componentDidMount() {
@@ -69,20 +70,7 @@ export default class LoginPage extends Component {
 			}
 		);
 	}
-	// componentDidMount() {
-	//   this.signIn.renderEl(
-	//     { el: '#sign-in-widget' },
-	//     () => {
-	//       /**
-	//        * In this flow, the success handler will not be called beacuse we redirect
-	//        * to the Okta org for the authentication workflow.
-	//        */
-	//     },
-	//     (err) => {
-	//       throw err;
-	//     },
-	//   );
-	// }
+
 	render() {
 		return (
 			<div>

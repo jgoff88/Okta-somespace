@@ -14,4 +14,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url("../public/img/house01a.png");
+  align-items: center;
+
+}
+
+div {
+  box-sizing: inherit;
 }

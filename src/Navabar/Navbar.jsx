@@ -13,7 +13,7 @@
 import { withAuth } from '@okta/okta-react';
 import React, { Component } from 'react';
 import { Container, Icon, Image, Menu } from 'semantic-ui-react';
-import { checkAuthentication } from './helpers';
+import { checkAuthentication } from '../../helpers';
 
 export default withAuth(
 	class Navbar extends Component {
@@ -48,7 +48,7 @@ export default withAuth(
 						<Container>
 							<Menu.Item as="a" header href="/">
 								<Image size="mini" src="/favicon_io (1)/android-chrome-512x512.png" />
-								&nbsp; Okta-React Sample Project
+								&nbsp; Give me sum space
 							</Menu.Item>
 							{this.state.authenticated === true && (
 								<Menu.Item id="messages-button" as="a" href="/messages">

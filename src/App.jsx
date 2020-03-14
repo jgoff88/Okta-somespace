@@ -15,11 +15,11 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Security, SecureRoute, ImplicitCallback } from '@okta/okta-react';
 import { Container } from 'semantic-ui-react';
 import config from './config';
-import Home from './Home';
-import CustomLoginComponent from './Login';
+import Home from './Components/Home/Home';
+import CustomLoginComponent from './Components/Login/Login';
 import Messages from './Messages';
-import Navbar from './Navbar';
-import Profile from './Profile';
+import Navbar from './Components/Navabar/Navbar';
+import Profile from './Components/Profile/Profile';
 
 function customAuthHandler({ history }) {
 	// Redirect to the /login page that has a CustomLoginComponent
