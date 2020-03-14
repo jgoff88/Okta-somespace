@@ -21,7 +21,6 @@
   },
   "scripts": {
     "start": "cross-env PORT=8080 react-app-rewired start",
-    "build": "react-app-rewired build",
     "test": "echo 'Tests not yet implemented' && exit 1",
     "eject": "react-scripts eject",
     "dev": "concurrently \"npm run start-watch\" \"cd client && npm start\"",
